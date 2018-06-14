@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Saber } from '../data/saber';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'pan-saber-detail',
@@ -9,7 +10,11 @@ import { Saber } from '../data/saber';
 export class SaberDetailComponent implements OnInit {
   @Input() saber: Saber;
 
-  constructor() {}
+  constructor(private location: Location) {}
 
   ngOnInit() {}
+
+  goBack(): void {
+    this.location.back();
+  }
 }

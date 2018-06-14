@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Location } from '@angular/common';
 
 import { SaberDetailComponent } from './saber-detail.component';
 
@@ -8,9 +9,9 @@ describe('SaberDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SaberDetailComponent ]
-    })
-    .compileComponents();
+      declarations: [SaberDetailComponent],
+      providers: [{ provide: Location, useValue: {} }]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

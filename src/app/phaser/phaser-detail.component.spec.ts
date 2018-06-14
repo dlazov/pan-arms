@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Location } from '@angular/common';
 
 import { PhaserDetailComponent } from './phaser-detail.component';
 
@@ -8,9 +9,9 @@ describe('PhaserDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PhaserDetailComponent ]
-    })
-    .compileComponents();
+      declarations: [PhaserDetailComponent],
+      providers: [{ provide: Location, useValue: {} }]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

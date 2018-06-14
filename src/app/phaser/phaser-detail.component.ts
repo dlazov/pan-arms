@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Location } from '@angular/common';
+
 import { Phaser } from '../data/phaser';
 
 @Component({
@@ -9,7 +11,11 @@ import { Phaser } from '../data/phaser';
 export class PhaserDetailComponent implements OnInit {
   @Input() phaser: Phaser;
 
-  constructor() {}
+  constructor(private location: Location) {}
 
   ngOnInit() {}
+
+  goBack(): void {
+    this.location.back();
+  }
 }
