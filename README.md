@@ -19,7 +19,7 @@ Alternatively you can run `ng serve --open` this will automatically open up the 
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-**Note:** You can also use the @nagular shortcuts and use the _blueprints_ aka `ng g c somethingcool --flat -d` etc.
+**Note:** You can also use the angular shortcuts `'g' for generator 'c' for component` and use the _blueprints_ aka `ng g c somethingcool --flat -d` etc.
 
 ## Running unit tests
 
