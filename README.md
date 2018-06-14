@@ -1,6 +1,13 @@
 # PanArms
 
+This project was created for Pan-Universal Arms as a demo project. This is a web app that will communicate with a back-end ERP service at a later date. That service is mocked out for now.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
+
+## Initial Setup
+
+1.  Make sure you are on node v8.9.4 (node -v) and npm v5.6.0 (npm -v). Recommended to use node version manager (nvm or nvm-windows).
+2.  Pull pan-uni-arms and run `npm install` and `npm install -g @angular/cli`. For this project I used Angular 6.0.4 and angular cli 6.0.8 (ng -v).
 
 ## Development server
 

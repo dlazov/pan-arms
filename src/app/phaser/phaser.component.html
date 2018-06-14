@@ -1,0 +1,7 @@
+<h2>Phaser Configuration</h2>
+<ul class="phasers">
+  <li *ngFor='let phaser of phasers' (click)="onSelect(phaser)" [class.selected]="phaser === selectedPhaser">
+    <span class="badge">{{phaser.phaserId}}</span> {{phaser.phaserName}} - {{phaser.phaserDescription}} : ${{phaser.phaserPrice}}
+  </li>
+</ul>
+<pan-phaser-detail [phaser]="selectedPhaser"></pan-phaser-detail>
