@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Saber } from '../data/saber';
-import { SABERS } from '../mocks/mock-saber.module';
+import { SaberService } from '../services/saber.service';
 
 @Component({
   selector: 'pan-saber',
@@ -8,14 +8,20 @@ import { SABERS } from '../mocks/mock-saber.module';
   styleUrls: ['./saber.component.scss']
 })
 export class SaberComponent implements OnInit {
-  sabers = SABERS;
+  sabers: Saber[];
   selectedSaber: Saber;
 
-  constructor() {}
+  constructor(private saberService: SaberService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getSabers();
+  }
 
   onSelect(saber: Saber): void {
     this.selectedSaber = saber;
+  }
+
+  getSabers(): void {
+    this.sabers = this.saberService.getSabers();
   }
 }

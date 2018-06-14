@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Phaser } from '../data/phaser';
-import { PHASERS } from '../mocks/mock-phasers.module';
+import { PhaserService } from '../services/phaser.service';
 
 @Component({
   selector: 'pan-phaser',
@@ -8,14 +8,20 @@ import { PHASERS } from '../mocks/mock-phasers.module';
   styleUrls: ['./phaser.component.scss']
 })
 export class PhaserComponent implements OnInit {
-  phasers = PHASERS;
+  phasers: Phaser[];
   selectedPhaser: Phaser;
 
-  constructor() {}
+  constructor(private phaserService: PhaserService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getPhasers();
+  }
 
   onSelect(phaser: Phaser): void {
     this.selectedPhaser = phaser;
+  }
+
+  getPhasers(): void {
+    this.phasers = this.phaserService.getPhasers();
   }
 }
