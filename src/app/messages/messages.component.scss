@@ -1,17 +1,12 @@
 /* MessagesComponent's private CSS styles */
-h2 {
-  color: red;
+h3 {
+  color: crimson;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
+  font-style: italic;
 }
 body {
   margin: 2em;
-}
-body,
-input[text],
-button {
-  color: crimson;
-  font-family: Cambria, Georgia;
 }
 
 button.clear {
