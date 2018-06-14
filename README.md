@@ -1,6 +1,6 @@
-# PanArms
+# Demo for Pan-Universal Arms
 
-This project was created for Pan-Universal Arms as a demo project. This is a web app that will communicate with a back-end ERP service at a later date. That service is mocked out for now.
+This project was created as a demo for Pan-Universal Arms a fictious company that produces Star War weapons. This is a web app that will communicate with a back-end ERP service at a later date. That service is mocked out for now.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 
