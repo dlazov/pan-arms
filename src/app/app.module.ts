@@ -9,6 +9,7 @@ import { PhaserComponent } from './phaser/phaser.component';
 import { SaberComponent } from './saber/saber.component';
 import { SaberDetailComponent } from './saber/saber-detail.component';
 import { PhaserDetailComponent } from './phaser/phaser-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +18,13 @@ import { PhaserDetailComponent } from './phaser/phaser-detail.component';
     PhaserComponent,
     SaberComponent,
     SaberDetailComponent,
-    PhaserDetailComponent
+    PhaserDetailComponent,
+    MessagesComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  providers: [
+    // no need to place any providers due to the `providedIn` flag...
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
