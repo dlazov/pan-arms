@@ -21,7 +21,8 @@ export class PhaserComponent implements OnInit {
     this.selectedPhaser = phaser;
   }
 
+  // Subscribe asynchronous to the data, now it's just mocked but real data will come from a back-end somewhere.
   getPhasers(): void {
-    this.phasers = this.phaserService.getPhasers();
+    this.phaserService.getPhasers().subscribe(phasers => (this.phasers = phasers));
   }
 }

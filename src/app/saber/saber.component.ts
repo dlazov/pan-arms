@@ -21,7 +21,8 @@ export class SaberComponent implements OnInit {
     this.selectedSaber = saber;
   }
 
+  // Subscribe asynchronous to the data, now it's just mocked but real data will come from a back-end somewhere.
   getSabers(): void {
-    this.sabers = this.saberService.getSabers();
+    this.saberService.getSabers().subscribe(sabers => (this.sabers = sabers));
   }
 }

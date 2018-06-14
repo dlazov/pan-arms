@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 import { Phaser } from '../data/phaser';
 import { PHASERS } from '../mocks/mock-phasers.module';
@@ -9,7 +10,7 @@ import { PHASERS } from '../mocks/mock-phasers.module';
 export class PhaserService {
   constructor() {}
 
-  getPhasers(): Phaser[] {
-    return PHASERS;
+  getPhasers(): Observable<Phaser[]> {
+    return of(PHASERS);
   }
 }
