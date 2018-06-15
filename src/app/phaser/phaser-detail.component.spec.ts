@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Location } from '@angular/common';
 
@@ -10,7 +11,8 @@ describe('PhaserDetailComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [PhaserDetailComponent],
-      providers: [{ provide: Location, useValue: {} }]
+      providers: [{ provide: Location, useValue: {} }],
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
 
