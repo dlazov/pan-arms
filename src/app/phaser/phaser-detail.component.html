@@ -1,16 +1,26 @@
 <div *ngIf="phaser">
-  <h2>{{phaser.phaserName | uppercase}} Details</h2>
-  <div>
-    <span>ID: </span>{{phaser.phaserId}}
-  </div>
-  <div>
-    <span>Name: </span>{{phaser.phaserName}}
-  </div>
-  <div>
-    <span>Description: </span>{{phaser.phaserDescription}}
-  </div>
-  <div>
-    <span>Price: $</span>{{phaser.phaserPrice}}
-  </div>
-  <button (click)="goBack()">go back</button>
+  <mat-card>
+    <h2>{{phaser.phaserName | uppercase}} Details</h2>
+    <div>
+      <span>ID: </span>{{phaser.phaserId}}
+    </div>
+    <div>
+      <span>Name: </span>{{phaser.phaserName}}
+    </div>
+    <div>
+      <span>Description: </span>{{phaser.phaserDescription}}
+    </div>
+    <div>
+      <span>Price: $</span>{{phaser.phaserPrice}}
+    </div>
+    <div>
+      <label>Items requested:
+        <input matInput [(ngModel)]="itemsRequested" placeholder="1">
+      </label>
+    </div>
+    <button type="button" mat-raised-button color="primary" (click)="goBack()">Go back</button>
+    <button class="mbutton" type="button" mat-raised-button color="primary" (click)="onOrderClick()">Order</button>
+    <div class="order" *ngIf="itemsOrdered > 0">You requested: {{itemsOrdered}} {{phaser.phaserName}}'s with option {{phaser.phaserDescription}} for a total price of
+      ${{phaser.phaserPrice * itemsOrdered}}</div>
+  </mat-card>
 </div>

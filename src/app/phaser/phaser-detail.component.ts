@@ -10,6 +10,8 @@ import { Phaser } from '../data/phaser';
 })
 export class PhaserDetailComponent implements OnInit {
   @Input() phaser: Phaser;
+  @Input() itemsRequested: number;
+  itemsOrdered: number;
 
   constructor(private location: Location) {}
 
@@ -17,5 +19,9 @@ export class PhaserDetailComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  onOrderClick() {
+    this.itemsOrdered = this.itemsRequested;
   }
 }

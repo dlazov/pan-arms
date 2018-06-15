@@ -1,19 +1,29 @@
 <div *ngIf="saber">
-  <h2>{{saber.saberName | uppercase}} Details</h2>
-  <div>
-    <span>ID: </span>{{saber.saberId}}
-  </div>
-  <div>
-    <span>Name: </span>{{saber.saberName}}
-  </div>
-  <div>
-    <span>Blade Color: </span>{{saber.saberBladeColor}}
-  </div>
-  <div>
-    <span>Blade Count: </span>{{saber.saberBladeCount}}
-  </div>
-  <div>
-    <span>Price: $</span>{{saber.saberPrice}}
-  </div>
-  <button (click)="goBack()">go back</button>
+  <mat-card>
+    <h2>{{saber.saberName | uppercase}} Details</h2>
+    <div>
+      <span>ID: </span>{{saber.saberId}}
+    </div>
+    <div>
+      <span>Name: </span>{{saber.saberName}}
+    </div>
+    <div>
+      <span>Blade Color: </span>{{saber.saberBladeColor}}
+    </div>
+    <div>
+      <span>Blade Count: </span>{{saber.saberBladeCount}}
+    </div>
+    <div>
+      <span>Price: $</span>{{saber.saberPrice}}
+    </div>
+    <div>
+      <label>Items requested:
+        <input matInput [(ngModel)]="itemsRequested" placeholder="1">
+      </label>
+    </div>
+    <button type="button" mat-raised-button color="primary" (click)="goBack()">Go back</button>
+    <button class="mbutton" type="button" mat-raised-button color="primary" (click)="onOrderClick()">Order</button>
+    <div class="order" *ngIf="itemsOrdered > 0">You requested: {{itemsOrdered}} {{saber.saberName}}'s with option's of blade color: {{saber.saberBladeColor}} and blade
+      count: {{saber.saberBladeCount}} for a total price of ${{saber.saberPrice * itemsOrdered}}</div>
+  </mat-card>
 </div>

@@ -9,6 +9,8 @@ import { Location } from '@angular/common';
 })
 export class SaberDetailComponent implements OnInit {
   @Input() saber: Saber;
+  @Input() itemsRequested: number;
+  itemsOrdered: number;
 
   constructor(private location: Location) {}
 
@@ -16,5 +18,9 @@ export class SaberDetailComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  onOrderClick() {
+    this.itemsOrdered = this.itemsRequested;
   }
 }

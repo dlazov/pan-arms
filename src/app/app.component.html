@@ -1,8 +1,15 @@
 <h1>{{title}}</h1>
-<nav>
-  <a routerLink="/config">Item Configuration Page</a>
-  <a routerLink="/phaser">Federation Phaser Configuration</a>
-  <a routerLink="/saber">Sith Saber Configuration</a>
-</nav>
-<router-outlet></router-outlet>
+<mat-toolbar color="primary" class="fixed-header">
+  <mat-toolbar-row>
+    <span>
+      <img src="../assets/logo.jpg" style="width:50px;" alt="">
+    </span>
+    <a mat-button routerLink="/config" routerLinkActive="active">Item Configuration Page</a>
+    <a mat-button routerLink="/phaser">Federation Phaser Configuration</a>
+    <a mat-button routerLink="/saber">Sith Saber Configuration</a>
+  </mat-toolbar-row>
+</mat-toolbar>
+<main>
+  <router-outlet></router-outlet>
+</main>
 <pan-messages></pan-messages>

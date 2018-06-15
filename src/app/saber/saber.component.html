@@ -1,7 +1,9 @@
 <h2>Sith Saber Configuration</h2>
-<ul class="sabers">
-  <li *ngFor='let saber of sabers' (click)="onSelect(saber)" [class.selected]="saber === selectedSaber">
-    <span class="badge">{{saber.saberId}}</span> {{saber.saberBladeColor}} | {{saber.saberBladeCount}} : ${{saber.saberPrice}}
-  </li>
-</ul>
+<mat-card>
+  <ul class="sabers">
+    <li *ngFor='let saber of sabers' (click)="onSelect(saber)" [class.selected]="saber === selectedSaber">
+      <span class="badge">{{saber.saberId}}</span> {{saber.saberBladeColor}} | {{saber.saberBladeCount}} : ${{saber.saberPrice}}
+    </li>
+  </ul>
+</mat-card>
 <pan-saber-detail [saber]="selectedSaber"></pan-saber-detail>
